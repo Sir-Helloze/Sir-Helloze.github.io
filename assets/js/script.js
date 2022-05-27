@@ -24,9 +24,11 @@ list.addEventListener('click', function (ev){
 
 function newElement(){
     var li = document.createElement('li');
+    var p = document.createElement('p');
     var inputValue = document.getElementById('toDoEl').value;
     var text = document.createTextNode(inputValue);
-    li.appendChild(text);
+    li.appendChild(p);
+    p.appendChild(text);
     if (inputValue == ""){
         alert("придумайте себе дело!");
     } 
