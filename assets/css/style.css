@@ -164,7 +164,6 @@ input {
     #addBtn {
         padding: 10px;
         width: 30%;
-        height: 60px;
         background: #d9d9d9;
         color: #555;
         float: left;
@@ -179,7 +178,6 @@ input {
     .readyBtn{
         padding: 10px;
         width: 40%;
-        height: 60px;
         background: #d9d9d9;
         color: #555;
         float: left;
@@ -194,7 +192,6 @@ input {
     .delBtn{
         padding: 10px;
         width: 40%;
-        height: 60px;
         margin-left: 7%;
         background: #d9d9d9;
         color: #555;
