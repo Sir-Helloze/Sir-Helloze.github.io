@@ -137,7 +137,7 @@ input {
 
 
 @media(max-width: 1125px){
-    .wrapper {width: 1050px; margin: 0 auto}
+    .wrapper {width: 1125px; margin: 0 auto}
     .header {
         width: 165px;
         background-color: #000;
