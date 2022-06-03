@@ -169,7 +169,7 @@ ul li:hover {
     color: green;
 }
 
-@media (min-height: 720px) {
+@media (min-height: 1126px) {
     .wrapper{
         margin: 10px;
         width: 100%;
