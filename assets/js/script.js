@@ -1,69 +1,48 @@
-var list = document.querySelector('ul');
-var todos;
-function toLocal(){
-    todos = list.innerHTML;
-    localStorage.setItem('todos', todos);
-}
-// в переменную todos буду получать содержимое list
-
-list.addEventListener('click', function (ev){
-    if (ev.target.tagName === "LI"){
-        ev.target.classList.toggle('checked');
-        toLocal();
-    }
-    else if(ev.target.tagName === "SPAN"){
-        var div = ev.target.parentNode;
-        div.remove();
-        toLocal();
-    }
-}, false);
-// произвожу делегирование событий
-// определяю по какому именно элементу поизведен click
-// если это элемент списка LI то тогда он принимает класс checked - дело выполнено
-// иначе же если нажат крестик, производится полное удаление дела
-
 function newElement(){
-    var li = document.createElement('li');
-    var p = document.createElement('p');
-    var inputValue = document.getElementById('toDoEl').value;
-    var text = document.createTextNode(inputValue);
-    li.appendChild(p);
-    p.appendChild(text);
-    if (inputValue == ""){
-        alert("придумайте себе дело!");
-    } 
-    else{
-        document.getElementById('list').appendChild(li);
-    }
-    document.getElementById('toDoEl').value = "";
+    var inputValue = document.getElementById('nameTask').value;
+    var inputValue2 = document.getElementById('newTask').value;
+    var inputValue3 = document.getElementById('timeTask').value;
     
-    var span = document.createElement('SPAN');
-    var icon = document.createTextNode('╳');
-    span.className = "close";
-    span.appendChild(icon);
-    li.appendChild(span);
-    toLocal();
-}
-// создаю элементы которые будут добавляться в LIST
-if(localStorage.getItem('todos')){
-    list.innerHTML = localStorage.getItem('todos');
-}
-// проверяю есть ли у меня значение данного ключа
-function delElement(){
-    localStorage.clear();
-    location.reload();
-}
-// произвожу удаление всех li из list
-function readyEl() {
-    var li = document.querySelectorAll('li');
-    for (var i = 0; i < li.length; i++){
-    li[i].classList.add('checked');
+    
+
+    if (inputValue && inputValue2 && inputValue3){
+        const object = {
+            name: inputValue,
+            discr: inputValue2,
+            time: inputValue3
+        }
+        localStorage.setItem('todos', JSON.stringify(object));
+
+        
+        document.getElementById('nameTask').value = '';
+        document.getElementById('newTask').value = '';
+        document.getElementById('timeTask').value = '';
+
+        if (object !=0 ){
+            console.log(object);
+            var out = '';
+            out +=`<div class="task"><ul><li><p>${object.name}</p><button class="load" onclick="load()">load</button></li><ul><li><p>${object.discr} --- ${object.time} H </p></li></ul></ul></div>`;
+            $('#list').html(out);
+            localStorage.setItem('save1', document.getElementById('list').innerHTML);
+            
+        }
     }
-    toLocal();
+    else{
+        alert("error")
+    }
+    toSave()
 }
-// функция отвечающая за перенос всех задач в состояние готово
+function toSave(){
+    var save = localStorage.getItem('save1');
+    document.getElementById('list').innerHTML = save;
+    
+}
+toSave()
+function load(){
+    localStorage.getItem('todos', object);
+    var outSub = '';
+    out +=`<tr><td><input type="text" placeholder="Old Task" id="oldTask" value="${object.discr}"></td><td><input id="timeTask" value="${object.time}"></td><td><button id="delTask">delete</button></td></tr>`;
+    $('#subTask').html(outSub);
+}
 
-
-
-function usl(e) { if(e.keyCode == 13) document.enter.input(); }
     
