@@ -169,7 +169,11 @@ ul li:hover {
     color: green;
 }
 
+<<<<<<< HEAD
 @media (min-height: 720px) {
+=======
+@media (min-height: 1126px) {
+>>>>>>> b3498c5bfb0967c4453b85c002d86cd0268a52ee
     .wrapper{
         margin: 10px;
         width: 100%;
@@ -316,4 +320,8 @@ ul li:hover {
         box-shadow: #868686;
         color: green;
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> b3498c5bfb0967c4453b85c002d86cd0268a52ee
