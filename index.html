@@ -1,39 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ToDo-Pro</title>
+    <title>Document</title>
     <link rel="stylesheet" href="assets/css/style.css">
-    <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
 </head>
 <body>
+    <header>
+        <div class="head">
+            <a href="#">DreamShare</a>
+        <div class="btn">
+            <a href="#">login</a>
+            <a href="#">sing in</a>
+        </div>
+        </div>
+        <div class="inform">
+            <h1>Share your<br>holiday dreams</h1>
+            <p>And find the perfect partner to fullfill it</p>
+            <a href="#">Find your holiday partner</a>
+        </div>
+    </header>
+    <h1 style="text-align:center;">How Dreamshare works?</h1>
     <div class="wrapper">
-        <div class="header">
-            <h1>Task name</h1>
-                <input type="text" placeholder="Enter task name" id="nameTask">
-        </div>
-        <div class="createTask">
-            <h1>Subtask</h1>
-            <button onclick="addSub()" id="addSubTask">+</button>
-            <table>
-                <tr>
-                    <td>discription</td><td>time</td><td>button</td>
-                </tr>
-            </table>
-            <table id="addSub"></table>
-            <table id="subTask"></table>
-            <input type="submit" onclick="newElement()" value="SAVE TASK IN LocalStorage" id="saveToLocal">
-            <input type="submit" onclick="newElement()" value="CREATE NEW TASK" id="addTask">
-        </div>
-        <div class="listTask">
-            <h1>Task list</h1>
-            <div id="list"></div>
+        <div class="conteiner">
+            <div class="Layer" style="background-image: url(assets/img/Layer2.jpg);">
+                <h2>step 1</h2>
+                <p>Sed leo enim, condimentum</p>
+                <h3>Quisque libero libero, dictum non turpis in, luctus semper lore</h3>
+            </div>
+            <div class="Layer" style="background-image: url(assets/img/Layer3.jpg);">
+                <h2>step 2</h2>
+                <p>Morbi velit risus</p>
+                <h3>Nulla venenatis tempor dui in molestie. Nulla quis dictum purus</h3>
+            </div>
+            <div class="Layer" style="background-image: url(assets/img/Layer4.jpg);">
+                <h2>step 3</h2>
+                <p>Sed leo enim, condimentum</p>
+                <h3>Quisque libero libero, dictum non turpis in, luctus semper lore</h3>
+            </div>
         </div>
     </div>
-
-    <script src="assets/js/jquery-3.2.1.min.js"></script>
-    <script src="assets/js/script.js"></script>
+    <h1 style="text-align:center;">Meet a partner for your best holiday</h1>
+    <div class="wrapper">
+        <div class="cont">
+            <div class="Layer_2">
+                <img src="/assets/img/photo1.png" alt="">
+                <p>Bradley Hunter</p>
+                <h3>Based in Chicago. I love playing tennis and loud music.</h3>
+            </div>
+            <div class="Layer_2">
+                <img src="/assets/img/photo2.png" alt="">
+                <p>Heather Walker</p>
+                <h3>I'm a happy person that loves cats and climbing on mountains. </h3>
+            </div>
+            <div class="Layer_2">
+                <img src="/assets/img/photo3.png" alt="">
+                <p>Lucas Marsha</p>
+                <h3>I get my inspiration from nature and objects around me. I have </h3>
+            </div>
+            <div class="Layer_2">
+                <img src="/assets/img/photo4.png" alt="">
+                <p>Bradley Hunter</p>
+                <h3>Based in Chicago. I love playing tennis and loud music.</h3>
+            </div>
+        </div>
+        <a href="#">See other partners</a>
+    </div>
 </body>
 </html>
